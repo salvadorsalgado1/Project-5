@@ -1,0 +1,51 @@
+package project5a;
+  import java.util.Scanner;
+
+
+
+
+
+/**
+ *
+ * @author Student-HSLH133
+ */
+public class Pen {
+    Scanner input = new Scanner(System.in);
+   
+    
+    private String color = "Black";
+    private String brand = "Gucci";
+    private int inkAmount = 2;
+    private String userInput;
+    
+    public void Pen()
+    {
+        
+    }
+    public String getBrand()
+    {
+        System.out.println(brand);
+        return brand;
+    }
+    public String getColor()
+    {
+        System.out.println(color);
+        return color;
+    }
+    public void write()
+    {
+        userInput = input.nextLine();
+        inkAmount--;
+    }
+    public boolean isEmpty()
+    {
+       
+           return false;
+    }
+    
+    public int getInkAmount()
+    {
+        System.out.println(inkAmount);
+        return inkAmount;
+    }
+}

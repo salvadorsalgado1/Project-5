@@ -1,0 +1,55 @@
+package project5a;
+
+
+public class Sphere {
+
+ private double radius;
+ public static final double DEFAULT_RADIUS = 1.0;
+
+ public Sphere() {
+ setRadius(DEFAULT_RADIUS);
+ } // end default constructor
+
+ public Sphere(double initialRadius) {
+ setRadius(initialRadius);
+ } // end constructor
+
+ public boolean equals(Object rhs) {
+ return ((rhs instanceof Sphere)
+ && (radius == ((Sphere) rhs).radius));
+ } // end equals
+
+ public void setRadius(double newRadius) {
+ if (newRadius >= 0.0) {
+ radius = newRadius;
+ } // end if
+ } // end setRadius
+
+ public double getRadius() {
+ return radius;
+ } // end getRadius
+
+ public double diameter() {
+ return 2.0 * radius;
+ } // end diameter
+
+ public double circumference() {
+ return Math.PI * diameter();
+ } // end circumference
+
+ public double area() {
+ return 4.0 * Math.PI * radius * radius;
+ } // end area
+
+ public double volume() {
+ return (4.0 * Math.PI * Math.pow(radius, 3.0)) / 3.0;
+ } // end volume
+
+ public void displayStatistics() {
+ System.out.println("\nRadius = " + getRadius()
+ + "\nDiameter = " + diameter()
+ + "\nCircumference = " + circumference()
+ + "\nArea = " + area()
+ + "\nVolume = " + volume());
+ } // end displayStatistics
+} // end Sphere

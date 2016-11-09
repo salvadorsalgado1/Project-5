@@ -1,0 +1,50 @@
+
+package project5a;
+public class Ball extends Sphere {
+
+ private String name; // the ball's name
+
+ // constructors:
+ public Ball() {
+ // Creates a ball with radius 1.0 and name "unknown."
+ setName("unknown");
+ } // end default constructor
+
+ public Ball(double initialRadius, String initialName) {
+ // Creates a ball with radius initialRadius and
+ // name initialName.
+ super(initialRadius);
+ setName(initialName);
+ } // end constructor
+
+ // additional or revised operations:
+ public boolean equals(Object rhs) {
+ return ((rhs instanceof Ball)
+ && (getRadius() == ((Ball) rhs).getRadius())
+ && (name.compareTo(((Ball) rhs).name) == 0));
+ } // end equals
+
+ public String getName() {
+ // Determines the name of a ball.
+ return name;
+ } // end getName
+
+ public void setName(String newName) {
+ // Sets (alters) the name of an existing ball.
+ name = newName;
+ } // end setName
+
+ public void resetBall(double newRadius, String newName) {
+ // Sets (alters) the radius and name of an existing
+ // ball to newRadius and newName, respectively.
+ setRadius(newRadius);
+ setName(newName);
+ } // end resetBall
+
+ public void displayStatistics() {
+ // Displays the statistics of a ball.
+ System.out.print("\nStatistics for a " + getName());
+ super.displayStatistics();
+ } // end displayStatistics
+
+} // end Ball
